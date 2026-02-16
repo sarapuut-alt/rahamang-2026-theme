@@ -28,14 +28,14 @@
 
         <nav>
             <ul class="nav-list">
-                <li><a href="#">Raamatust</a></li>
-                <li><a href="#">Materjalid</a></li>
-                <li><a href="#">Arvutus</a></li>
-                <li><a href="#">Kontakt</a></li>
+            <li><a class="btn btn--primary" href="#">Raamatust</a></li>
+            <li><a class="btn btn--primary" href="#">Materjalid</a></li>
+            <li><a class="btn btn--primary" href="#">Arvutus</a></li>
+            <li><a class="btn btn--primary" href="#">Kontakt</a></li>
             </ul>
          </nav>
 
-            <a href="#" class="btn">
+            <a href="#" class="btn btn-secondary">
                 Osta raamat
             </a>
 
