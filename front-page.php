@@ -43,6 +43,7 @@ get_header();
 
 
     <!--Feature section: -->
+
     <section class="feature-section">
       <div class="feature-section__inner content-container">
 
@@ -55,13 +56,13 @@ get_header();
           ?>
         </h2>
 
-        <p class="feature-section__subtitle.text-body-large">
-          Rahamäng õpetab lastele olulisi rahoskusi läbi lõbusate tegevuste ja lugude,
-          mis jäävad neile meelde kogu eluks.
+        <p class="feature-section__subtitle text-body-large">
+          Rahamäng õpetab lastele olulisi rahoskusi läbi lõbusate tegevuste ja lugude, mis jäävad neile meelde kogu eluks.
         </p>
 
         <ul class="feature-cards">
           <?php
+
           // Kaartide andmed 
           $cards = [
             [
@@ -109,7 +110,101 @@ get_header();
       </div>
     </section>
 
+    <!--Materials section: -->
+       
+<section class="materials-section">
+  <div class="materials-section__inner content-container">
+    <h2 class="materials-section__title text-heading-2">
+      <?php
+        printf(
+          'Avasta %s materjalid',
+          '<span class="text-accent">rahatarkuse</span>'
+        );
+      ?>
+    </h2>
 
-</main>
+    <p class="materials-section__subtitle text-body-large">
+      Vali endale sobiv materjal, mis aitab lastel mõista raha väärtust ja tarka rahakasutust.
+    </p>
+
+    <ul class="materials-cards">
+      <?php
+      // Kaardid 
+      $materials = [
+        [
+          'img'       => get_template_directory_uri() . '/assets/books/book-tom-opib-rahamangu.png',
+          'langs'     => ['EE','EN','RU'],
+          'kicker'    => 'Rahatarkuse lasteraamat',
+          'title'     => 'Tom õpib rahamängu',
+          'excerpt'   => 'Kõige populaarsem rahatarkuse raamat lastele.',
+          'price'     => '€20.00',
+          'permalink' => '#',
+        ],
+        [
+          'img'       => get_template_directory_uri() . '/assets/books/book-mina-opin-rahamangu.png',
+          'langs'     => ['EE'],
+          'kicker'    => 'Rahatarkuse töövihik lastele',
+          'title'     => 'Mina õpin rahamängu',
+          'excerpt'   => 'Eesti esimene rahatarkuse töövihik lastele, 2.–4. klass.',
+          'price'     => '€20.00',
+          'permalink' => '#',
+        ],
+        [
+          'img'       => get_template_directory_uri() . '/assets/books/book-mina-opetan-rahamangu.png',
+          'langs'     => ['EE'],
+          'kicker'    => 'Rahatarkuse juhend õpetajatele',
+          'title'     => 'Mina õpetan rahamängu',
+          'excerpt'   => 'Õppematerjal, mis toetab rahatarkuse õpetamist.',
+          'price'     => '€20.00',
+          'permalink' => '#',
+        ],
+      ];
+
+      foreach ($materials as $item): ?>
+        <li class="materials-card">
+          <a class="materials-card__link" href="<?php echo esc_url($item['permalink']); ?>">
+            <div class="materials-card__media">
+              <?php if (!empty($item['langs'])): ?>
+                <div class="materials-card__langs">
+                  <?php foreach ($item['langs'] as $lang): ?>
+                    <span class="materials-card__lang"><?php echo esc_html($lang); ?></span>
+                  <?php endforeach; ?>
+                </div>
+              <?php endif; ?>
+              <img src="<?php echo esc_url($item['img']); ?>" alt="" loading="lazy" />
+            </div>
+
+            <div class="materials-card__body">
+              <?php if (!empty($item['kicker'])): ?>
+                <p class="materials-card__kicker text-body-small"><?php echo esc_html($item['kicker']); ?></p>
+              <?php endif; ?>
+
+              <h3 class="materials-card__title"><?php echo esc_html($item['title']); ?></h3>
+
+              <?php if (!empty($item['excerpt'])): ?>
+                <p class="materials-card__excerpt text-body-medium"><?php echo esc_html($item['excerpt']); ?></p>
+              <?php endif; ?>
+
+              <?php if (!empty($item['price'])): ?>
+                <p class="materials-card__price"><?php echo esc_html($item['price']); ?></p>
+              <?php endif; ?>
+            </div>
+          </a>
+          <div class="cart-btn-container">
+            <button class="materials-card__button" onclick="window.location.href='<?php echo esc_url($item['permalink']); ?>'; return false;">
+              Lisa ostukorvi
+            </button>
+          </div>
+        </li>
+      <?php endforeach; ?>
+    </ul>
+
+    <div class="button-container button-container--center">
+      <a href="" class="btn btn-secondary">
+        Vaata lisaks
+      </a>
+    </div>
+  </div>
+</section>
 
 <?php get_footer(); ?>
