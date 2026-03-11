@@ -127,6 +127,9 @@ get_header();
       Vali endale sobiv materjal, mis aitab lastel mõista raha väärtust ja tarka rahakasutust.
     </p>
 
+    
+
+
     <ul class="materials-cards">
       <?php
       // Kaardid 
@@ -202,6 +205,205 @@ get_header();
     <div class="button-container button-container--center">
       <a href="" class="btn btn-secondary">
         Vaata lisaks
+      </a>
+    </div>
+  </div>
+</section>
+
+    <!--Materials section 2: -->
+       
+<section class="materials-section-2">
+  <div class="materials-section-2__inner content-container">
+    <h2 class="materials-section-2__title text-heading-2">
+      <?php
+        printf(
+          'Rahatarkuse %s allalaadimiseks',
+          '<span class="text-accent">materjalid</span>'
+        );
+      ?>
+    </h2>
+
+    <p class="materials-section-2__subtitle text-body-large">
+      Mängulised ja praktilised abimaterjalid, mis toetavad lapse rahatarkuse arengut. Mõned tasuta, teised mugavalt allalaetavad väikese tasu eest.
+    </p>
+    
+    <h3 class="text-heading-3 section-subheading">
+    <img
+    class="section-subheading__icon"
+    src="<?php echo esc_url( get_template_directory_uri() . '/assets/icons/gift-duotone.svg' ); ?>"
+    alt=""
+    aria-hidden="true"
+    width="32"
+    height="32"
+    loading="lazy"
+    decoding="async"
+    >
+    <span class="section-subheading__text">Tasuta materjalid</span>
+    </h3>
+
+<ul class="materials-cards">
+  <?php
+  // Kaardid 2
+  $materials = [
+    [
+      'img'       => get_template_directory_uri() . '/assets/materials/ettevotluse-alused.png',
+      'tags'      => ['Tasuta'],
+      'kicker'    => 'Tasuta rahatarkuse materjal',
+      'title'     => 'Rahatarkuse õppematerjal lapsele: ettevõtluse alused',
+      'permalink' => '#',
+    ],
+    [
+      'img'       => get_template_directory_uri() . '/assets/materials/kulutamise-juhend.png',
+      'tags'      => ['Tasuta'],
+      'kicker'    => 'Tasuta rahatarkuse materjal',
+      'title'     => 'Teadliku kulutamise juhend lapsele',
+      'permalink' => '#',
+    ],
+    [
+      'img'       => get_template_directory_uri() . '/assets/materials/varvimislehed.png',
+      'tags'      => ['Tasuta'],
+      'kicker'    => 'Tasuta rahatarkuse materjal',
+      'title'     => 'Erinevad rahatarkuse värvimislehed lapsele',
+      'permalink' => '#',
+    ],
+  ];
+  ?>
+
+  <?php foreach ($materials as $item): ?>
+    <li class="materials-card-2">
+      <a class="materials-card-2__link" href="<?php echo esc_url($item['permalink']); ?>">
+        
+        <div class="materials-card-2__media">
+          <?php if (!empty($item['tags'])): ?>
+            <div class="materials-card-2__tags">
+              <?php foreach ($item['tags'] as $tag): ?>
+                <span class="materials-card-2__tag"><?php echo esc_html($tag); ?></span>
+              <?php endforeach; ?>
+            </div>
+          <?php endif; ?>
+
+          <img src="<?php echo esc_url($item['img']); ?>" alt="" loading="lazy" decoding="async" />
+        </div>
+
+        <div class="materials-card-2__body">
+          <?php if (!empty($item['kicker'])): ?>
+            <p class="materials-card-2__kicker text-body-small"><?php echo esc_html($item['kicker']); ?></p>
+          <?php endif; ?>
+
+          <h3 class="materials-card-2__title"><?php echo esc_html($item['title']); ?></h3>
+        </div>
+
+        <div class="materials-card-2__button-row">
+          <span class="btn btn-tertiary materials-card-2__cta">
+            Lae alla tasuta
+            <img
+            class="icon-download"
+            src="<?php echo esc_url( get_template_directory_uri() . '/assets/icons/download-simple.svg' ); ?>"
+            alt=""
+            aria-hidden="true"
+            width="18"
+            height="18" />
+          </span>
+        </div>
+
+      </a>
+    </li>
+  <?php endforeach; ?>
+</ul>
+
+    <h3 class="text-heading-3 section-subheading">
+    <img
+    class="section-subheading__icon"
+    src="<?php echo esc_url( get_template_directory_uri() . '/assets/icons/books-duotone.svg' ); ?>"
+    alt=""
+    aria-hidden="true"
+    width="32"
+    height="32"
+    loading="lazy"
+    decoding="async"
+    >
+    <span class="section-subheading__text">Praktilised rahatarkuse materjalid lapsele</span>
+    </h3>
+
+    <ul class="materials-cards">
+  <?php
+  // Kaardid 3
+  $materials = [
+    [
+      'img'       => get_template_directory_uri() . '/assets/materials/unknown.png',
+      'kicker'    => 'TEEMA 2',
+      'title'     => 'Unistamine',
+      'price'     => '€6.00',
+      'permalink' => '#',
+    ],
+    [
+      'img'       => get_template_directory_uri() . '/assets/materials/unknown.png',
+      'kicker'    => 'TEEMA 6',
+      'title'     => 'Tom teenib raha',
+      'price'     => '€6.00',
+      'permalink' => '#',
+    ],
+    [
+      'img'       => get_template_directory_uri() . '/assets/materials/unknown.png',
+      'tags'      => ['Erihind'],
+      'kicker'    => 'KÕIK TEEMAD',
+      'title'     => 'Täiskursus',
+      'price'     => '€49.00',
+      'permalink' => '#',
+    ],
+  ];
+  ?>
+
+  <?php foreach ($materials as $item): ?>
+    <li class="materials-card-2">
+      <a class="materials-card-2__link" href="<?php echo esc_url($item['permalink']); ?>">
+        
+        <div class="materials-card-2__media">
+          <?php if (!empty($item['tags'])): ?>
+            <div class="materials-card-2__tags">
+              <?php foreach ($item['tags'] as $tag): ?>
+                <span class="materials-card-2__tag"><?php echo esc_html($tag); ?></span>
+              <?php endforeach; ?>
+            </div>
+          <?php endif; ?>
+
+          <img src="<?php echo esc_url($item['img']); ?>" alt="" loading="lazy" decoding="async" />
+        </div>
+
+        <div class="materials-card-2__body">
+          <?php if (!empty($item['kicker'])): ?>
+            <p class="materials-card-2__kicker text-body-small"><?php echo esc_html($item['kicker']); ?></p>
+          <?php endif; ?>
+
+          <h3 class="materials-card-2__title"><?php echo esc_html($item['title']); ?></h3>
+        </div>
+
+        <?php if (!empty($item['price'])): ?>
+        <p class="materials-card-2__price"><?php echo esc_html($item['price']); ?></p>
+        <?php endif; ?>
+        
+
+        <div class="materials-card-2__button-row">
+          <span class="btn btn-tertiary materials-card-2__cta">
+            Vaata lähemalt
+            <img
+            class="icon-download"
+            src="<?php echo esc_url( get_template_directory_uri() . '/assets/icons/caret-right-light.svg' ); ?>"
+            alt=""
+            aria-hidden="true"
+            width="18"
+            height="18" />
+          </span>
+        </div>
+
+      </a>
+    </li>
+  <?php endforeach; ?>
+</ul>
+
+    <div class="button-container button-container--center">
+      <a href="" class="btn btn-secondary">
+        Vaata ka teisi teemavihikuid
       </a>
     </div>
   </div>
