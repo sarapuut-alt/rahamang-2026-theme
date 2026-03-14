@@ -31,16 +31,14 @@
 
 body {
 background: linear-gradient(
-    to bottom,
-    #ffffff,
-    var(--primary-100)
-  );
+  to bottom,
+   #ffffff,
+  var(--primary-100)
+);
   color: var(--text);
-
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-
-    padding-top: 105px;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  padding-top: 105px;
 }
 
 .text-body-xs {
@@ -120,18 +118,18 @@ body a {
 }
 
 .top-bar {
-    position: fixed;
-    left: 50%;
-    transform: translate(-50%);
-    width: 100%;
-    background-color: var(--neutral-0);
-    padding: 24px 80px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 8px;
-    transition: top 0.3s ease-in-out;
-    box-shadow: 0px 4px 12px var(--primary-100);
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100%;
+  background-color: var(--neutral-0);
+  padding: 24px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  transition: top 0.3s ease-in-out;
+  box-shadow: 0px 4px 12px var(--primary-100);
 }
 
 .top-bar--hidden {
@@ -140,45 +138,45 @@ body a {
 
 
 .top-bar-nav-menu {
-    display: flex;
-    gap: 34px;
+  display: flex;
+  gap: 34px;
 }
 
 .nav-list {
-    display: flex;
-    gap: 8px
+  display: flex;
+  gap: 8px
 }
 
 .top-bar-nav-menu {
-    display: flex;
-    gap: 8px;
+  display: flex;
+  gap: 8px;
 }
 
 .top-bar-nav-menu a {
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
 
-    &:hover {
-      border-bottom: #6699B1 4px solid;
-    }
+  &:hover {
+    border-bottom: #6699B1 4px solid;
+  }
 }
 
 .btn {
-    padding: 14px 24px;
-    background-color: var(--neutral-0);
-    border: 4px solid var(--neutral-0);
-    color: var(--text);
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 0px;
-    text-decoration: none;
-    display: inline-block;
+  padding: 14px 24px;
+  background-color: var(--neutral-0);
+  border: 4px solid var(--neutral-0);
+  color: var(--text);
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 0px;
+  text-decoration: none;
+  display: inline-block;
 
-    &:hover {
-        background-color: var(--neutral-0);
-        border-bottom: 4px solid var(--primary-300);
-        }
+  &:hover {
+    background-color: var(--neutral-0);
+    border-bottom: 4px solid var(--primary-300);
+    }
 }
 
 .btn.btn-secondary {
@@ -286,6 +284,8 @@ body a {
 .feature-section__title {
   font-family: "Baloo 2", sans-serif;
   color: var(--text);
+  max-width: 760px;
+  margin: 0 auto;
 }
 
 .feature-section__subtitle.text-body-large {
@@ -381,6 +381,8 @@ body a {
 .materials-section__title {
   font-family: "Baloo 2", sans-serif;
   color: var(--text);
+  max-width: 760px;
+  margin: 0 auto;
 }
 
 .materials-section__subtitle.text-body-large {
@@ -542,6 +544,7 @@ body a {
   font-weight: 800;
   font-size: medium;
   color: var(--text);
+  text-align: left;
 }
 
 
@@ -556,7 +559,7 @@ body a {
   width: 100%;
   display: flex;
   gap: 24px;
-  margin-top: 32px;
+  margin-top: 64px;
   justify-content: center;
 }
 
@@ -568,18 +571,16 @@ body a {
   display: flex;
   flex-direction: column;
   background-color: var(--neutral-0);
-  background-image: url(assets/background-pattern-blue.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .materials-section-2__title {
   font-family: "Baloo 2", sans-serif;
   color: var(--text);
+  max-width: 760px;
+  margin: 0 auto;
 }
 
-.materials-section-2.text-body-large {
+.materials-section-2__subtitle {
   font-family: "Montserrat", sans-serif;
   color: var(--text);
   text-align: center;
@@ -599,7 +600,9 @@ body a {
   display: inline-flex;        
   align-items: center;        
   gap: 16px;                 
-  margin: 64px 0px 32px 0;         
+  margin: 64px 0px 32px 0;
+  width: 100%;
+  justify-content: center;
 }
 
 .section-subheading__icon {
@@ -619,6 +622,7 @@ body a {
 .section-subheading__text {
   font-family: "Baloo 2", sans-serif;
   color: var(--text);
+  
   }
 
 /* Cards grid-2 */
@@ -753,8 +757,8 @@ body a {
 }
 
 .materials-card-2__cta .icon-download {
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
   display: inline-block;
   flex: 0 0 auto;
 }
@@ -765,6 +769,422 @@ body a {
   color: var(--text);
 }
 
+/* CTA Offer Section */
 
+.cta-offer {
+  position: relative;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background-color: var(--neutral-0);
+}
+
+.cta-offer__card {
+  position: relative;
+  margin-inline: auto;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-image: url(assets/background.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-opacity: 0.5;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px var(--primary-200);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+}
+
+/* Eyebrow */
+.cta-offer__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 24px;
+  border-radius: 3px;
+  background: var(--neutral-0);
+  color: var(--accent-500);
+  font-weight: text-body-medium;
+}
+
+.cta-offer__badge-icon { 
+  width: 32px;
+  height: 32px;
+}
+
+.cta-offer__badge-text { 
+  line-height: 1; 
+}
+
+.cta-offer__title {
+  margin: 0;
+  text-align: center;
+}
+
+.cta-offer__subtitle {
+  margin: 0;
+  text-align: center;
+  max-width: 760px;
+  color: var(--text);
+}
+
+.cta-offer__actions {
+  margin-top: 8px;
+  display: flex;
+  justify-content: center;
+}
+.cta-offer__cta {
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+/* Trust märgid */
+.cta-offer__trust {
+  margin: 24px 0 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 16px 32px;
+  align-items: center;
+}
+
+.cta-offer__trust-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.cta-offer__trust-icon {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+}
+
+@media (max-width: 1024px) {
+  .cta-offer__card { max-width: 100%; }
+}
+
+@media (max-width: 640px) {
+  .cta-offer { padding-top: 64px; padding-bottom: 64px; }
+  .cta-offer__card { padding: 24px 16px 22px; gap: 14px; }
+  .cta-offer__trust {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+}
+
+/* Testimonials Section */
+
+.testimonials-section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background-color: var(--neutral-0);
+}
+
+.testimonials-section__title {
+  max-width: 730px;
+  margin: 0 auto;
+  text-align: center; 
+}
+
+.testimonials-section__subtitle {
+  max-width: 760px;
+  margin: 8px auto 0;
+  text-align: center;
+  color: var(--text);
+}
+
+/* Grid */
+.testimonials-cards {
+  list-style: none;
+  padding: 0;
+  margin: 32px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding-top: 64px;
+}
+@media (max-width: 1024px) { .testimonials-cards { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px)  { .testimonials-cards { grid-template-columns: 1fr;          } }
+
+/* Kaart */
+.testimonial-card {
+  background: var(--neutral-0);
+  border-radius: 16px;
+  box-shadow: 0 6px 20px var(--primary-200);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px var(--primary-200);
+}
+
+/* Jutumärgid */
+.testimonial-card__quote-icon-img {
+  width: 70px;
+  height: 70px;
+  display: block;
+  color: var(--primary-300); 
+}
+
+/* Tsitaat */
+.testimonial-card__quote {
+  margin: 0;
+  color: var(--primary-600);
+  font-style: italic;
+  line-height: 24px;
+}
+
+/* Tärnid */
+.testimonial-card__stars {
+  display: inline-flex;
+  gap: 6px;
+}
+.testimonial-card__stars .star {
+  fill: var(--primary-100); /* tühi */
+}
+.testimonial-card__stars .star.is-active {
+  fill: var(--primary-300); /* täidetud */
+}
+
+/* Divider */
+.testimonial-card__divider {
+  width: 100%;
+  height: 1px;
+  border: 0;
+  background: var(--primary-100);
+  margin: 4px 0 0;
+}
+
+/* Autoririda */
+.testimonial-card__author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.testimonial-card__avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 999px;
+  background: var(--primary-200);
+  color: var(--neutral-0);
+  display: grid;
+  place-items: center;
+  font-weight: body-large;
+}
+
+.testimonial-card__meta { display: grid; gap: 2px; }
+.testimonial-card__name { margin: 0; }
+.testimonial-card__role { color: var(--text); opacity: .9; }
+
+.testimonial-card__stars {
+  display: inline-flex;
+  align-items: center;
+}
+
+.testimonial-card__stars-img {
+  width: auto;
+  height: 32px;
+  display: block;
+}
+
+/* Footer*/
+
+.site-footer {
+  position: relative;
+  background: var(--text);
+  color: var(--neutral-0);
+  margin-top: 80px;
+}
+
+.site-footer__wave {
+  width: 100%;
+  line-height: 0;
+  background: var(--neutral-0);
+}
+
+.site-footer__wave img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.site-footer__inner {
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+
+.site-footer__grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+@media (max-width: 1024px) { .site-footer__grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 640px)  { .site-footer__grid { grid-template-columns: 1fr;    } }
+
+/* Col 1 */
+.site-footer__logo img { display: block; }
+
+.site-footer__copy {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 12px 0 8px 0;
+  color: var(--neutral-0);
+}
+
+.site-footer__desc {
+  color: var(--neutral-0);
+  margin: 0 0 16px 0;
+  max-width: 440px;
+  
+}
+
+.site-footer__label {
+  margin: 8px 0 6px 0;
+  color: var(--neutral-0);
+  opacity: 0.9;
+}
+
+.site-footer__stores {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.site-footer__social {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+/* Col headings + dots */
+.site-footer__heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--neutral-0);
+  margin: 0 0 16px 0;
+}
+
+.site-footer__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  display: inline-block;
+}
+.site-footer__dot--blue { background: var(--primary-300); }
+.site-footer__dot--pink { background: var(--accent-500); }
+
+/* Kiirlingid */
+.site-footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+.site-footer__links a {
+  color: var(--neutral-0);
+  text-decoration: none;
+  font-weight: 700;
+}
+.site-footer__links a:hover { text-decoration: underline; }
+
+/* Kontakt */
+.site-footer__contact {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+.site-footer__contact li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.site-footer__contact a {
+  color: var(--neutral-0);
+  text-decoration: none;
+}
+.site-footer__contact a:hover { text-decoration: underline; }
+.site-footer__contact-icon { display: inline-block; }
+
+
+/* Alumine rida */
+.site-footer__bottom {
+  margin-top: 32px;
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  padding-top: 16px;
+}
+.site-footer__legal {
+  color: var(--neutral-0);
+  opacity: 0.9;
+  text-decoration: none;
+  font-weight: 700;
+}
+.site-footer__legal:hover { text-decoration: underline; }
+
+/* Uued nupustiilid */
+
+/* Partneri badge – kapsel joonega tumedal taustal */
+.btn.btn-store {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.6);
+  color: var(--neutral-0);
+  text-decoration: none;
+  font-weight: 800;
+  box-shadow: none;
+}
+.btn.btn-store img { display: inline-block; }
+.btn.btn-store:hover {
+  border-color: var(--neutral-0);
+  background: rgba(255,255,255,0.06);
+}
+
+/* Ümmargune ikooninupp – sotsiaalide jaoks */
+.btn.btn-icon-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  display: inline-grid;
+  place-items: center;
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.6);
+  color: var(--neutral-0);
+  text-decoration: none;
+}
+.btn.btn-icon-circle:hover {
+  border-color: var(--neutral-0);
+  background: rgba(255,255,255,0.06);
+}
+.btn.btn-icon-circle img { 
+  display: block; 
+}
 
   
