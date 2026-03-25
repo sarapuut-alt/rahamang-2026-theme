@@ -10,8 +10,8 @@ $front_page_title = get_field('front_page_title');
 
     <!--Top section: -->
     
-    <section class="top-section content-container">
-      <div class="top-section__content">
+    <section class="top-section">
+      <div class="top-section__content content-container">
         <div class="top-section__text-content">
           <h1><?php echo esc_html($front_page_title); ?></h1>
           <h1 class="text-heading-1">Õpeta lastele <span class="text-accent">rahatarkust</span> läbi mängu</h1>

@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap');
 
 :root {
   --primary-100: #D0E7F1;
@@ -30,11 +30,7 @@
 }
 
 body {
-background: linear-gradient(
-  to bottom,
-   #ffffff,
-  var(--primary-100)
-);
+background: var(--neutral-0);
   color: var(--text);
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
@@ -208,6 +204,7 @@ body a {
 .top-section {
     padding-top: 70px;
     padding-bottom: 150px;
+    background: linear-gradient(to bottom,var(--neutral-0),var(--primary-100));
 
   .top-section__content {
       position: relative;
@@ -279,6 +276,7 @@ body a {
   gap: 48px;
   display: flex;
   flex-direction: column;
+  background: var(--primary-100);
 }
 
 .feature-section__title {
@@ -375,7 +373,6 @@ body a {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-opacity: 0.5;
 }
 
 .materials-section__title {
@@ -522,7 +519,6 @@ body a {
 
 .materials-card:hover .materials-card__button {
   opacity: 1;
-  
 }
 
 .materials-card__kicker {
@@ -546,7 +542,6 @@ body a {
   color: var(--text);
   text-align: left;
 }
-
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
@@ -740,7 +735,8 @@ body a {
   display: flex;
   justify-content: center;   
   align-items: center;
-  padding: 0 16px 16px;      
+  padding: 0 16px 16px;
+  margin-bottom: 16px;      
 }
 
 .materials-card-2__button-row .btn.tertiary.materials-card-2__cta,
@@ -787,7 +783,6 @@ body a {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-opacity: 0.5;
   border-radius: 16px;
   box-shadow: 0 6px 20px var(--primary-200);
   display: flex;
@@ -1038,40 +1033,74 @@ body a {
 @media (max-width: 640px)  { .site-footer__grid { grid-template-columns: 1fr;    } }
 
 /* Col 1 */
-.site-footer__logo img { display: block; }
-
-.site-footer__copy {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin: 12px 0 8px 0;
-  color: var(--neutral-0);
-}
 
 .site-footer__desc {
   color: var(--neutral-0);
-  margin: 0 0 16px 0;
+  margin: 32px 0 32px 0;
   max-width: 440px;
-  
 }
 
 .site-footer__label {
-  margin: 8px 0 6px 0;
-  color: var(--neutral-0);
+  margin: 32px 0 8px 0;
   opacity: 0.9;
 }
 
 .site-footer__stores {
   display: flex;
-  gap: 12px;
+  gap: 24px;
   flex-wrap: wrap;
-  margin-top: 4px;
 }
+
+.btn.btn-store {
+  height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  gap: 12px;
+  padding: 17px 24px;
+  background: transparent;
+  border: 1px solid var(--neutral-0);
+}
+
+.btn.btn-store:hover {
+  background: var(--primary-600);
+}
+
+/* Social */
 
 .site-footer__social {
   display: flex;
-  gap: 12px;
-  margin-top: 16px;
+  gap: 24px;
+}
+
+.btn.btn-icon-circle {
+  width: auto;
+  height: auto;            
+  border-radius: 999px;
+  display: inline-grid;
+  place-items: center;
+  background: transparent;
+  border: 1px solid var(--neutral-0);
+  padding: 12px;
+}
+
+.btn.btn-icon-circle:hover {
+  border-color: var(--neutral-0);
+  background: var(--primary-600)
+}
+
+.social-icon {
+  max-height: 32px;
+  width: auto;
+}
+
+.site-footer__copy {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 32px 0 32px 0;
+  color: var(--neutral-0);
 }
 
 /* Col headings + dots */
@@ -1098,14 +1127,14 @@ body a {
   padding: 0;
   margin: 0;
   display: grid;
-  gap: 10px;
+  gap: 8px;
 }
 .site-footer__links a {
   color: var(--neutral-0);
   text-decoration: none;
   font-weight: 700;
 }
-.site-footer__links a:hover { text-decoration: underline; }
+.site-footer__links a:hover { text-decoration: underline; color: var(--primary-500);}
 
 /* Kontakt */
 .site-footer__contact {
@@ -1113,18 +1142,25 @@ body a {
   padding: 0;
   margin: 0;
   display: grid;
-  gap: 10px;
+  gap: 16px;
 }
+
+.site-footer__contact-icon {
+  display: flex;
+  gap: 8px;
+  height: 24px;
+}
+
 .site-footer__contact li {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 .site-footer__contact a {
   color: var(--neutral-0);
   text-decoration: none;
 }
-.site-footer__contact a:hover { text-decoration: underline; }
+.site-footer__contact a:hover { text-decoration: underline; color: var(--primary-500)}
 .site-footer__contact-icon { display: inline-block; }
 
 
@@ -1134,28 +1170,28 @@ body a {
   display: flex;
   gap: 20px;
   justify-content: flex-end;
-  border-top: 1px solid rgba(255,255,255,0.15);
+  border-top: 1px solid var(--primary-300);
   padding-top: 16px;
 }
+
 .site-footer__legal {
   color: var(--neutral-0);
   opacity: 0.9;
   text-decoration: none;
   font-weight: 700;
 }
-.site-footer__legal:hover { text-decoration: underline; }
+.site-footer__legal:hover { text-decoration: underline; color: var(--primary-500); }
 
 /* Uued nupustiilid */
 
-/* Partneri badge – kapsel joonega tumedal taustal */
+/* Partneri badge */
 .btn.btn-store {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding: 10px 14px;
+  gap: 12px;
   border-radius: 999px;
   background: transparent;
-  border: 2px solid rgba(255,255,255,0.6);
+  border: 1px solid var(--neutral-0);
   color: var(--neutral-0);
   text-decoration: none;
   font-weight: 800;
@@ -1164,24 +1200,12 @@ body a {
 .btn.btn-store img { display: inline-block; }
 .btn.btn-store:hover {
   border-color: var(--neutral-0);
-  background: rgba(255,255,255,0.06);
+  background: var(--primary-600);
 }
 
-/* Ümmargune ikooninupp – sotsiaalide jaoks */
-.btn.btn-icon-circle {
-  width: 40px;
-  height: 40px;
-  border-radius: 999px;
-  display: inline-grid;
-  place-items: center;
-  background: transparent;
-  border: 2px solid rgba(255,255,255,0.6);
-  color: var(--neutral-0);
-  text-decoration: none;
-}
 .btn.btn-icon-circle:hover {
   border-color: var(--neutral-0);
-  background: rgba(255,255,255,0.06);
+  background: var(--primary-600);
 }
 .btn.btn-icon-circle img { 
   display: block; 
