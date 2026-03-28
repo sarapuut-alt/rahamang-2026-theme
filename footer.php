@@ -135,14 +135,56 @@
 
     <!-- Alumine navigatsioon -->
     <div class="site-footer__bottom">
-      <a class="site-footer__legal" href="#">© 2026 Rahamäng</a>
-      <a class="site-footer__legal" href="#">Privaatsuspoliitika</a>
-      <a class="site-footer__legal" href="#">Tingimused</a>
-    </div>
+
+  <div class="site-footer__bottom-left">
+    <p class="site-footer__copy text-body-small">
+      <img class="site-footer__heart" src="..." alt="">
+      © <?php echo date('Y'); ?> Rahamäng
+    </p>
+  </div>
+
+  <div class="site-footer__bottom-right">
+    <a class="site-footer__legal" href="#">Privaatsuspoliitika</a>
+    <a class="site-footer__legal" href="#">Tingimused</a>
+  </div>
 
   </div><!-- /.inner -->
 
 </footer>
+ <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const burger = document.querySelector(".top-bar__burger");
+  const nav = document.querySelector(".top-bar__nav");
+
+  burger.addEventListener("click", () => {
+    burger.classList.toggle("is-open");
+    nav.classList.toggle("is-open");
+  });
+});
+</script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    let lastScroll = 0;
+    const topBar = document.querySelector(".top-bar");
+
+    window.addEventListener("scroll", function () {
+        const currentScroll = window.pageYOffset;
+
+        if (currentScroll > lastScroll && currentScroll > 80) {
+            // scroll down → HIDE
+            topBar.classList.add("top-bar--hidden");
+        } else {
+            // scroll up → SHOW
+            topBar.classList.remove("top-bar--hidden");
+        }
+
+        lastScroll = currentScroll;
+    });
+});
+</script>
+
 
 <?php wp_footer(); ?>
 </body>
